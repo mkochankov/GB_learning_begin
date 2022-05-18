@@ -1,11 +1,17 @@
-﻿// Задача 10: Напишите программу, которая принимает на
-//вход трёхзначное число и на выходе показывает вторую
-//цифру этого числа.
+﻿// Задача 13: Напишите программу, которая выводит
+// третью цифру заданного числа или сообщает, что третьей
+// цифры нет.
+
 
 Console.Clear();
-Console.WriteLine("Введите трехзначное число");
+Console.WriteLine("Введите число");
 int number = Convert.ToInt32(Console.ReadLine());
-string num = Convert.ToString(number);
-num = num.Remove(0,1);
-num = num.Remove(1,1);
-Console.WriteLine(num);
+if (number<100)
+{
+    Console.WriteLine("Нет третьей цифры");
+} 
+else 
+{
+    string num = Convert.ToString(number);
+    Console.WriteLine(num.ToString()[2]);
+}
